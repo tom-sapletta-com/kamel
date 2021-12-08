@@ -12,6 +12,8 @@ kamel kubectl camel-k
 
 
 
+[Developing with Kubernetes on Fedora](https://www.tutorialworks.com/kubernetes-fedora-dev-setup/)
+
 
 ### \- The default config file
 
