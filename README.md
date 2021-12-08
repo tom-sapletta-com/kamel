@@ -12,6 +12,23 @@ kamel kubectl camel-k
 
 
 
+## Kubernetes configuration file
+
+Kubernetes uses a YAML file called kubeconfig to store cluster authentication information for kubectl. kubeconfig contains a list of contexts to which kubectl refers when running commands. By default, the file is saved at $HOME/.kube/config.
+
+A context is a group of access parameters. Each context contains a Kubernetes cluster, a user, and a namespace. The current context is the cluster that is currently the default for kubectl: all kubectl commands run against that cluster.
+
+When you create a cluster using gcloud container clusters create, an entry is automatically added to the kubeconfig in your environment, and the current context changes to that cluster:
+
+gcloud container clusters create my-cluster
+Creating my-cluster...done
+Fetching cluster endpoint and auth data.
+kubeconfig entry generated for my-cluster
+
+When you create a cluster using Google Cloud Console or using gcloud command-line tool from a different computer, your environment's kubeconfig is not updated. Additionally, if a project team member uses gcloud to create a cluster from their computer, their kubeconfig is updated but yours is not. Follow the Generate a kubeconfig entry instructions to add these clusters to your local kubeconfig.
+
+
+
 + [Install and Set Up kubectl on Linux | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
 
