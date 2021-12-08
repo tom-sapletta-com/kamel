@@ -2,7 +2,21 @@
 kamel kubectl camel-k
 
 
-[Install kubectl on Fedora using the Snap Store | Snapcraft](https://snapcraft.io/install/kubectl/fedora)
+[apache/camel-k: Apache Camel K is a lightweight integration platform, born on Kubernetes, with serverless superpowers](https://github.com/apache/camel-k)
+
+
+    kubectl config view --flatten
+
+    
+    kamel run --name=withrest routes-rest.js
+
+
+
++ [Install and Set Up kubectl on Linux | Kubernetes](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+
+
+
+## [Install kubectl on Fedora using the Snap Store | Snapcraft](https://snapcraft.io/install/kubectl/fedora)
 
 > ## Enable snaps on Fedora and install kubectl
 > 
