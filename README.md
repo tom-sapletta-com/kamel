@@ -12,7 +12,41 @@ kamel kubectl camel-k
 
 
 
-## Kubernetes configuration file
+
+### \- The default config file
+
+[Kubernetes - Using kubectl with kubeconfig files](https://www.nathannellans.com/post/kubernetes-using-kubectl-with-kubeconfig-files)
+
+
+By default, the kubectl command-line tool will look for a kubeconfig file simply named _config_ (no file extension) in the _.kube_ directory of the user's profile:
+
+-   Linux: $HOME/.kube/config
+    
+-   Windows: %USERPROFILE%\\.kube\\config
+    
+
+This is the easiest method to use, in my opinion. Simply place a file in the correct directory, and kubectl will automatically pick it up and use it.
+
+## Some useful kubectl commands
+
+#show you the full contents of your kubeconfig file
+kubectl config view
+
+#show the value in the _current__\-__context_ line of your kubeconfig file
+kubectl config current\-context
+
+#show all of the Users currently defined in your kubeconfig file
+kubectl config get\-users
+
+#show all of the Clusters currently defined in your kubeconfig file
+kubectl config get\-clusters
+
+#show all of the Contexts currently defined in your kubeconfig file
+kubectl config get\-contexts
+
+
+
+## Kubernetes configuration file google cloud
 
 Kubernetes uses a YAML file called kubeconfig to store cluster authentication information for kubectl. kubeconfig contains a list of contexts to which kubectl refers when running commands. By default, the file is saved at $HOME/.kube/config.
 
